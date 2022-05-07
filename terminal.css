@@ -1,0 +1,38 @@
+body {
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem;
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #c8c8c8;
+}
+
+::selection {
+  background: #0080ff;
+  text-shadow: none;
+}
+pre {
+  margin: 0;
+}
+
+.fam-pic {
+  margin: 1rem;
+}
+
+.click a {
+  color: white;
+}
+
+.click a:hover {
+  max-width: fit-content;
+  background-color: #0080ff;
+}
+
+@media screen and (max-width: 992px) {
+  output {
+    font-size: 10px;
+  }
+}

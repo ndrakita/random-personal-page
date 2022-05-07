@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends</title>
+    <link rel="icon" type="image/png" href="lain.jpg" />
+
+    <style>
+      @import url(bg.css);
+
+      body {
+        overflow: hidden;
+        color: #000;
+        font-family: "MS Sans Serif";
+      }
+      .window {
+        box-shadow: 0 3px 14px #000;
+        width: 320px;
+        height: 400px;
+        border: outset 2px;
+        position: relative;
+        background: #c0c0c0;
+        animation: fam-axis-animation 0.3s ease-in-out 0s;
+      }
+
+      @keyframes fam-axis-animation {
+        from {
+          transform: scale(0.1);
+        }
+      }
+
+      .window .titlebar {
+        background: #000080;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        height: 22px;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        line-height: 21px;
+        padding-left: 5px;
+        cursor: default;
+      }
+
+      .window .titlebar .titlebar-buttons {
+        border: outset 2px;
+        background: #c0c0c0;
+        float: right;
+        height: 12px;
+        width: 12px;
+        line-height: 12px;
+        text-align: center;
+        font-size: 20px;
+        margin: 3px;
+        color: #000;
+      }
+
+      .titlebar-buttons a {
+        transform: translateY(-5px);
+        color: #000;
+      }
+      .titlebar a:hover {
+        background-color: red;
+      }
+
+      .window .w-content {
+        position: absolute;
+        top: 22px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+      }
+
+      .window {
+        margin: 10rem auto;
+      }
+
+      .w-content {
+        margin: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <div class="titlebar">
+        informasi_teman.exe
+        <div class="titlebar-buttons closeme">
+          <a href="index.html"> &times;</a>
+        </div>
+      </div>
+      <div class="w-content">
+        <p>Foto.jpg</p>
+        <img src="friends.jpg" alt="teman" width="300" height="300" />
+      </div>
+    </div>
+  </body>
+</html>

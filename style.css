@@ -1,0 +1,286 @@
+/* Global */
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #c1b492;
+  --secondary: #fefefe;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(129, 71, 71, 0.5);
+  box-shadow: inset 0 0 6px rgba(129, 71, 71, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(179, 14, 14, 0.5);
+  box-shadow: inset 0 0 6px rgba(179, 14, 14, 0.5);
+}
+
+/* End of Global */
+
+/* Container */
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+  width: 29rem;
+  animation: intro 0.5s ease-in-out 0s;
+}
+@keyframes intro {
+  from {
+    transform: scaleX(0.6);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.box {
+  background-color: #232931;
+  box-shadow: 0 3px 14px #000;
+}
+
+/* End of Container */
+
+/* Up */
+.up {
+  opacity: 0;
+  margin: 2rem;
+  position: fixed;
+  padding: 25px;
+  width: 25px;
+  background-color: #000;
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
+  transform: rotate(270deg);
+  transition: 0.2s ease;
+}
+.up:hover {
+  opacity: 1;
+  background-color: red;
+}
+/* End of Up */
+
+/* Same Style */
+.same-style {
+  padding: 3rem;
+  margin: 5rem 0.2rem 1rem;
+  border-radius: 3%;
+}
+/* End of Same Style */
+
+/* Main Header */
+
+#home {
+  opacity: 0;
+}
+
+.wired-header {
+  margin-top: 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, #ff0000, #c1b492, #ff00f3, #c24b4b);
+  background-size: 400%;
+  font-size: 1.6em;
+  letter-spacing: 5px;
+  font-weight: 500;
+  word-spacing: 5px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: animateHeader 10s linear infinite;
+}
+@keyframes animateHeader {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+.intro {
+  color: #c1b492;
+  font-size: 0.5em;
+  text-align: center;
+}
+.header-length {
+  margin-top: 2rem;
+}
+.blink {
+  text-align: center;
+  word-spacing: 200px;
+  letter-spacing: 20px;
+  background: linear-gradient(90deg, #ff0000, #c1b492, #ff00f3, #c24b4b);
+  background-size: 400%;
+  font-size: 1.6em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: AnimateBlink 1s linear infinite;
+}
+@keyframes AnimateBlink {
+  0% {
+    opacity: 0;
+    background-position: 0%;
+  }
+  50% {
+    opacity: 100%;
+    background-position: 300%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 0%;
+  }
+}
+.header-img {
+  display: block;
+  margin: 0 auto;
+}
+nav ul {
+  margin-right: 3rem;
+  display: flex;
+}
+nav ul li,
+a {
+  color: var(--primary);
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s all ease-out;
+}
+nav ul li a:hover {
+  transform: rotateY(40deg);
+  color: #ff00f3;
+}
+
+/* End of Main Header */
+
+/* About Me */
+#about {
+  padding-bottom: 20rem;
+}
+.content {
+  margin-top: 20rem;
+  animation: x-axis-animation 2s ease-in-out 0s infinite alternate;
+}
+@keyframes x-axis-animation {
+  from {
+    transform: rotateX(20deg);
+  }
+  to {
+    transform: rotateX(-20deg);
+  }
+}
+.bg-content {
+  word-spacing: 10px;
+  letter-spacing: 2px;
+  min-height: 5vh;
+}
+
+.bg-content p {
+  word-spacing: -2px;
+  text-align: justify;
+  text-justify: distribute;
+  text-align-last: left;
+}
+
+.bg-content h1 {
+  cursor: default;
+}
+.bg-content span {
+  background: linear-gradient(120deg, #c1b492, #ff00f3, #c24b4b);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: animate 0.5s linear infinite;
+}
+
+/* End of About Me */
+
+/* Connect/Wired */
+
+#wired {
+  padding-bottom: 1.3rem;
+}
+
+.wired-selector {
+  margin-top: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  display: flex;
+}
+.wired-selector a {
+  border-bottom: 1px solid var(--primary);
+  padding: 0.2rem;
+  transition: transform 300ms;
+}
+.wired-selector a:hover {
+  border: 1px dotted var(--primary);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+  transform: rotate(360deg);
+}
+.wired-content {
+  text-align: justify;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.wired-content-h1 {
+  cursor: default;
+  letter-spacing: -4px;
+  transition: all 0.1s ease-in;
+}
+.wired-content-h1:hover {
+  letter-spacing: 0.2em;
+}
+
+/* End of Connect/Wired */
+
+footer {
+  min-height: 0.1vh;
+  margin: 0 auto;
+  font-style: oblique;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin: 0 auto;
+    display: block;
+    width: 23rem;
+  }
+  .wired-selector a {
+    border-bottom: 1px solid var(--primary);
+    padding: 0.2rem;
+    transition: transform 300ms;
+  }
+  .blink {
+    text-align: center;
+    word-spacing: 100px;
+    letter-spacing: 5px;
+  }
+
+  nav ul {
+    margin-right: 2rem;
+    display: flex;
+  }
+
+  li a {
+    font-size: 0.8rem;
+    margin: 0 0.4rem;
+  }
+}
+
+/* End of Responsive */

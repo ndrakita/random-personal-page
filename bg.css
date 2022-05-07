@@ -1,0 +1,25 @@
+/* body {
+  overflow-x: hidden;
+  background-image: repeating-linear-gradient(#f6f6f6, #c9d6df 0.00085px);
+  height: 100vh;
+  color: white;
+  font: Inconsolata, monospace;
+  animation: tv-static 10s linear infinite;
+}
+
+@keyframes tv-static {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 101% 101%;
+  }
+} */
+
+body {
+  overflow-x: hidden;
+  background-image: url(line.webp);
+  height: 100vh;
+  color: white;
+  font: Inconsolata, monospace;
+}
